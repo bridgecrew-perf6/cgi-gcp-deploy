@@ -6,8 +6,7 @@
 # See LICENSE and README files
 # ****************************************************
 
-#UPDATE THE FOLLOWINGS
-
+#UPDATE THE VALUES
 #UPDATE THIS: PROJECT NAME/ID
 PROJECT_ID="helloworld041019"
 
@@ -21,7 +20,7 @@ svaccount="cloudguard@helloworld041019.iam.gserviceaccount.com"
 gwname="cg-gateway"
 
 #UPDATE THIS: ZONE
-#gwzone="asia-southeast1-a"
+GCPZone="asia-southeast1-a"
 
 #UPDATE THIS: BOOT DISK SIZE in GB
 bootdisksize="100"
@@ -50,8 +49,7 @@ subnet2="spoke-a-public-1"
 #UPDATE THIS: Back End Private IP
 back_private_ip="10.4.0.10"
 
-
-gcloud compute instances create $gwname --zone "asia-southeast1-a" \
+gcloud compute instances create $gwname --zone $GCPZone \
 --can-ip-forward --project $PROJECT_ID --boot-disk-size $bootdisksize --boot-disk-type $bdtype \
 --boot-disk-device-name $gwname --machine-type $machinetype --service-account $svaccount --tags "checkpoint-gateway" \
 --network-interface network=$vpc1,subnet=$subnet1,private-network-ip=$front_private_ip \

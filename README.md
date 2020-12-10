@@ -7,9 +7,14 @@ This is a simple helper script to automate deploying CloudGuard IaaS gateway on 
 
 Please do the followings first;
 
-1.  MAKE SURE to update the variables in the script to relfect your actual values. \
+1. A service account with proper permission setup for your GCP Project: https://cloud.google.com/compute/docs/access/service-accounts 
+Compute, enabled engine API: https://cloud.google.com/sdk/gcloud/reference/services/enable
 
-2. Make it executable by executing  ```chmod +x cgi-gcp-setup.sh``` 
+   Example: ```gcloud services --project <project name> enable compute.googleapis.com```
+
+2. MAKE SURE to update the variables in the script to relfect your actual values. \
+
+3. Make it executable by executing  ```chmod +x cgi-gcp-setup.sh``` 
 
 ### Deploy using the script 
 
