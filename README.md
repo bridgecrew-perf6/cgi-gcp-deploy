@@ -41,4 +41,4 @@ Your CGI Gateway has been created on Thu Dec 10 13:14:41 +08 2020!
 
 
 Best, \
-Jayden AUng
+Jayden Aung
