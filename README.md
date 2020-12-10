@@ -12,11 +12,12 @@ Please do the followings first;
 
 ### Deploy using the script 
 
-It's always a good idea to check if the image is valid.
+It's always a good idea to check if the CloudGuard image you want to deploy is valid. For example, we're gonna deploy ```check-point-r8040-payg-294-759-v20201202``` in this lab. 
 
 ```bash
 gcloud compute images list --project=checkpoint-public | grep check-point-r8040-payg-294-759-v20201202
 ```
+> You will also need to update the image variable in the script as well.
 
 And Execute the following:
 
