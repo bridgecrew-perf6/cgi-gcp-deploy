@@ -1,6 +1,7 @@
-# cgi-gcp-deploy
-## CloudGuard IaaS Google Cloud Platform Deployment Helper
----
+# CloudGuard IaaS (GCP) Deployment Helper Script
+
+
+This is a simple helper script to automate deploying CloudGuard IaaS gateway on Google Cloud Platform.
 
 ### Pre-requisites 
 
@@ -42,7 +43,7 @@ Your CGI Gateway has been created on Thu Dec 10 13:14:41 +08 2020!
 
 ```
 $gcloud compute instances list  
-              
+
 NAME            ZONE               MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP          EXTERNAL_IP    STATUS
 cg-gateway      asia-southeast1-a  n1-standard-2               10.0.0.10,10.4.0.10  35.198.197.18  RUNNING
 ```
