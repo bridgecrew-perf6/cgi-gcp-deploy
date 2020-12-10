@@ -1,7 +1,20 @@
 # CloudGuard IaaS (GCP) Deployment Helper Script
 
+This is a simple helper script to automate deploying a specific CloudGuard IaaS gateway image on Google Cloud Platform.
 
-This is a simple helper script to automate deploying CloudGuard IaaS gateway on Google Cloud Platform.
+A couple of reasons you might want to do this may include deploying or restoring a Management HA solution or a log server, and restoring a previous backup, etc.
+
+### Check the exact CloudGuard IaaS image 
+
+Check the CloudGuard images available on Google Cloud.
+
+```bash
+gcloud compute images list --project=checkpoint-public 
+```
+
+In this lab, we're gonna deploy ```check-point-r8040-payg-294-759-v20201202```.
+
+> You will also need to update the image variable in the script as well.
 
 ### Pre-requisites 
 
@@ -16,14 +29,6 @@ Compute, enabled engine API: https://cloud.google.com/sdk/gcloud/reference/servi
 
 3. Make it executable by executing  ```chmod +x cgi-gcp-setup.sh``` 
 
-### Deploy using the script 
-
-It's always a good idea to check if the CloudGuard image you want to deploy is valid. For example, we're gonna deploy ```check-point-r8040-payg-294-759-v20201202``` in this lab. 
-
-```bash
-gcloud compute images list --project=checkpoint-public | grep check-point-r8040-payg-294-759-v20201202
-```
-> You will also need to update the image variable in the script as well.
 
 And Execute the following:
 
