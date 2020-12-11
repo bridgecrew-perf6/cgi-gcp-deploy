@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# ****************************************************
-# A simple script to deploy CGI on GCP 
+# *********************************************************
+# A simple script to deploy Check Point CloudGuard on GCP 
 # Author: Jayden Kyaw Htet Aung 
 # See LICENSE and README files
-# ****************************************************
+# **********************************************************
 
 #UPDATE THE FOLLOWING:
 #UPDATE THIS: PROJECT NAME/ID

@@ -1,6 +1,6 @@
-# CloudGuard IaaS (GCP) Deployment Helper Script
+# Check Point CloudGuard IaaS (GCP) Deployment Helper Script
 
-This is a simple helper script to automate deploying a specific CloudGuard IaaS gateway image on Google Cloud Platform.
+This is a simple helper script to automate deploying a specific Check Point CloudGuard IaaS gateway image on Google Cloud Platform.
 
 There are other ways to deploy CloudGuard on Google Cloud Platform (e.g. Deployment manager). But if you'd like to deploy a very specific CloudGuard image for variety of reasons, this method and script is for you. A couple of reasons you might want to do this may include deploying or restoring a Management HA solution or a log server, and restoring a previous backup, etc. 
 
