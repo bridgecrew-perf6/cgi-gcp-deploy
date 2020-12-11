@@ -140,3 +140,5 @@ dmypy.json
 *.tfvars
 *.x
 .vscode/settings.json
+
+.DS_Store
