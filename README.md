@@ -18,16 +18,22 @@ In this lab, we're gonna deploy ```check-point-r8040-payg-294-759-v20201202```.
 
 ### Pre-requisites 
 
-Please do the followings first;
+Please do the following;
 
-1. A service account with proper permission setup for your GCP Project: https://cloud.google.com/compute/docs/access/service-accounts 
-Compute, enabled engine API: https://cloud.google.com/sdk/gcloud/reference/services/enable
+1. Install [Google Cloud SDK](https://cloud.google.com/sdk/docs/install). 
 
-   Example: ```gcloud services --project <project name> enable compute.googleapis.com```
+2. A service account with proper permission setup for your GCP Project: https://cloud.google.com/compute/docs/access/service-accounts
 
-2. MAKE SURE to update the variables in the script to relfect your actual values. \
+3. Enable Compute API: https://cloud.google.com/sdk/gcloud/reference/services/enable
 
-3. Make it executable by executing  ```chmod +x cgi-gcp-setup.sh``` 
+   Example: 
+   ```bash 
+   gcloud services --project <project name> enable compute.googleapis.com
+   ```
+
+4. MAKE SURE to update the variables in the script. (e.g. project, network, etc)
+
+5. Download the ```cgi-gcp-setup.sh``` script from this repo, and make it executable by executing  ```chmod +x cgi-gcp-setup.sh``` 
 
 
 And Execute the following:
@@ -57,7 +63,8 @@ $gcloud compute instances list
 NAME            ZONE               MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP          EXTERNAL_IP    STATUS
 cg-gateway      asia-southeast1-a  n1-standard-2               10.0.0.10,10.4.0.10  35.198.197.18  RUNNING
 ```
-
+---
+Reference: [sk163656](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk163656&partition=Advanced&product=CloudGuard)
 
 Best, \
 Jayden Aung
