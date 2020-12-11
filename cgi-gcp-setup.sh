@@ -6,30 +6,15 @@
 # See LICENSE and README files
 # ****************************************************
 
-#UPDATE THE VALUES
+#UPDATE THE FOLLOWING:
 #UPDATE THIS: PROJECT NAME/ID
-PROJECT_ID="helloworld041019"
+PROJECT_ID="myproject1234"
 
-#UPDATE THIS: CLOUDGUARD IMAGE 
+#UPDATE THIS WITH THE IMAGE THAT YOU WISH TO DEPLOY
 cgiimage="check-point-r8040-payg-294-759-v20201202"
 
 #UPDATE THIS: SERVICE ACCOUNT
-svaccount="cloudguard@helloworld041019.iam.gserviceaccount.com"
-
-#UPDATE THIS: NAME OF THE GATEWAY VM
-gwname="cg-gateway"
-
-#UPDATE THIS: ZONE
-GCPZone="asia-southeast1-a"
-
-#UPDATE THIS: BOOT DISK SIZE in GB. IT SHOULD BE LARGER THAN 100 GB.
-bootdisksize="150"
-
-#UPDATE THIS: BOOT DISK TYPE. 
-bdtype="pd-standard"
-
-#UPDATE THIS: MACHINE TYPE
-machinetype="n1-standard-2"
+svaccount="cloudguard@myproject1234.iam.gserviceaccount.com"
 
 #UPDATE THIS: Front End VPC
 vpc1="lab-vpc-sea"
@@ -48,6 +33,23 @@ subnet2="spoke-a-public-1"
 
 #UPDATE THIS: Back End Private IP
 back_private_ip="10.4.0.10"
+
+#UPDATE THIS: NAME OF THE GATEWAY VM
+gwname="cg-gateway"
+
+#UPDATE THIS: ZONE
+GCPZone="asia-southeast1-a"
+
+#UPDATE THIS: BOOT DISK SIZE in GB. IT SHOULD BE LARGER THAN 100 GB.
+bootdisksize="150"
+
+#UPDATE THIS: BOOT DISK TYPE. IF UNSURE, LEAVE IT AS IT IS.
+bdtype="pd-standard"
+
+#UPDATE THIS: MACHINE TYPE. IF UNSURE, LEAVE IT AS IT IS.
+machinetype="n1-standard-2"
+
+
 
 gcloud compute instances create $gwname --zone $GCPZone \
 --can-ip-forward --project $PROJECT_ID --boot-disk-size $bootdisksize --boot-disk-type $bdtype \

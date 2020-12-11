@@ -12,7 +12,11 @@ Check the CloudGuard images available on Google Cloud.
 gcloud compute images list --project=checkpoint-public 
 ```
 
-In this lab, we're gonna deploy ```check-point-r8040-payg-294-759-v20201202```.
+In this lab, we're gonna deploy ```check-point-r8040-payg-294-759-v20201202```. So you can verify the image by executing the following:
+
+ ```bash 
+ gcloud compute images list --project=checkpoint-public  | grep check-point-r8040-payg-294-759-v20201202
+ ```
 
 > You will also need to update the image variable in the script as well.
 
@@ -50,21 +54,27 @@ And Execute the following:
 WARNING: You have selected a disk size of under [200GB]. This may result in poor I/O performance. For more information, see: https://developers.google.com/compute/docs/disks#performance.
 Created [https://www.googleapis.com/compute/v1/projects/helloworld041019/zones/asia-southeast1-a/instances/cg-gateway].
 NAME        ZONE               MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP          EXTERNAL_IP    STATUS
-cg-gateway  asia-southeast1-a  n1-standard-2               10.0.0.10,10.4.0.10  35.198.197.18  RUNNING
+cg-gateway  asia-southeast1-a  n1-standard-2               10.0.0.10,10.4.0.10  1.2.3.4  RUNNING
 Your CGI Gateway has been created on Thu Dec 10 13:14:41 +08 2020!
 
 ```
 
 ### Verify that your Gateway is running
 
-```
+```bash 
 $gcloud compute instances list  
 
 NAME            ZONE               MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP          EXTERNAL_IP    STATUS
-cg-gateway      asia-southeast1-a  n1-standard-2               10.0.0.10,10.4.0.10  35.198.197.18  RUNNING
+cg-gateway      asia-southeast1-a  n1-standard-2               10.0.0.10,10.4.0.10  1.2.3.4  RUNNING
 ```
+
+Once the gateway is deployed, you can access the public IP via https (or SSH).
+
+![header image](img/cgi-gcp.png)
 ---
-Reference: [sk163656](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk163656&partition=Advanced&product=CloudGuard)
+### Reference: [sk163656](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk163656&partition=Advanced&product=CloudGuard)
+
+
 
 Best, \
 Jayden Aung
