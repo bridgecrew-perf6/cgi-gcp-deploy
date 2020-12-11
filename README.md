@@ -2,7 +2,7 @@
 
 This is a simple helper script to automate deploying a specific CloudGuard IaaS gateway image on Google Cloud Platform.
 
-A couple of reasons you might want to do this may include deploying or restoring a Management HA solution or a log server, and restoring a previous backup, etc.
+A couple of reasons you might want to do this may include deploying or restoring a Management HA solution or a log server, and restoring a previous backup, etc. 
 
 ### Check the exact CloudGuard IaaS image 
 
@@ -31,9 +31,9 @@ Please do the following;
    gcloud services --project <project name> enable compute.googleapis.com
    ```
 
-4. MAKE SURE to update the variables in the script. (e.g. project, network, etc)
+4. Download the ```cgi-gcp-setup.sh``` script from this repo, and update the **VARIABLES** in the script. (e.g. project, network, etc)
 
-5. Download the ```cgi-gcp-setup.sh``` script from this repo, and make it executable by executing  ```chmod +x cgi-gcp-setup.sh``` 
+5. Make the script executable by executing  ```chmod +x cgi-gcp-setup.sh``` 
 
 
 And Execute the following:

@@ -23,7 +23,7 @@ gwname="cg-gateway"
 GCPZone="asia-southeast1-a"
 
 #UPDATE THIS: BOOT DISK SIZE in GB
-bootdisksize="100"
+bootdisksize="150"
 
 #UPDATE THIS: BOOT DISK TYPE
 bdtype="pd-standard"
